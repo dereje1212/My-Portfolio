@@ -1,0 +1,28 @@
+@import url(https://fonts.google.com/specimen/Roboto+Slab:wght@500&display=swap);
+:root {
+  --yellow-theme-backgroud-collor: #1d1d1d;
+  --yellow-them-main-color: #ffdd40;
+  --yellow-them-sub-text-color: #ffffff;
+  --yellow-them-nave-background-color: #181818;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background: var(--yellow-theme-backgroud-collor);
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
