@@ -31,8 +31,7 @@ const personalDtail = [
     },
 ]
 
-const jobsummary = "Seasoned and independent Front End Developer with 5 years of experience in blending the art of design with skill of programming to deliver an immersive and engaging user experience through efficient website development, proactive feature optimization, and relentless debugging. Very passionate about aesthetics and UI design. It is imperative that you provide a thorough and professional approach to your resume. As a Front End Developer you will be judged by your ability to use UX and UI concepts and follow design guidelines. It is about expressing your attention to detail and how you can help implement design ideas for your future employer";
-;
+const jobsummary = "With six months of hands-on experience as a Front End Developer, I have honed my ability to seamlessly blend design and programming to create engaging user experiences. Passionate about aesthetics and UI design, I focus on efficient website development, proactive feature optimization, and effective debugging. I am committed to providing a thorough and professional approach to my work, utilizing UX and UI concepts to follow design guidelines and ensure attention to detail. My goal is to help implement design ideas and deliver immersive user experiences for future employers.";
 
 const About = () => {
     return (
@@ -65,19 +64,39 @@ const About = () => {
                         end={{
                             transform: "translatex(0px)"
                         }}>
-                        <h2 className="personalInformationHeaderText">
-                            Personal Information</h2>
-                        <ul style={{ listStyle: "none" }}>
-                            {
-                                personalDtail.map((item, i) => (
-                                    <li key={i} >
-                                        <span className="titel">{item.label}</span>
-                                        <span className="value">{item.Value}</span>
-                                    </li>
-                                ))
+<h2 style={{ textAlign: 'center',padding:'0 0 11px 0', fontFamily: 'Arial, sans-serif', fontSize:"20px", color: 'var(--yellow-them-main-color)' }}>Personal Information</h2>
+<ul style={{ listStyle: "none", padding: '0', margin: '0' }}>
+    {
+        personalDtail.map((item, i) => (
+            <li key={i} style={{
+                display: 'flex',
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                padding: '10px 15px',
+                borderBottom: '2px solid color: green',  // Transparent base border for spacing
+                backgroundOrigin: 'border-box',
+                backgroundClip: 'content-box',
+                boxShadow: '0 4px 6px rgba(40, 201, 245, 0.1)', // Soft shadow for depth
+                transition: 'background-color 0.3s ease',
+            }} 
+            onMouseEnter={(e) => e.target.style.backgroundColor = 'var(--yellow-theme-backgroud-collor)'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}>
+                <span style={{
+                    fontWeight: 'bold',
+                    fontSize: '17px',
+                    color: 'var(--yellow-them-sub-text-color)',
+                    textTransform: 'capitalize',
+                }}>{item.label}</span>
+                <span style={{
+                    fontSize: '16px',
+                    color: 'var(--yellow-them-sub-text-color)',
+                    fontStyle: 'italic',
+                }}>{item.Value}</span>
+            </li>
+        ))
+    }
+</ul>
 
-                            }
-                        </ul>
                     </Animate>
                 </div>
 

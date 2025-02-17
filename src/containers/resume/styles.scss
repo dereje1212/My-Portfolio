@@ -6,21 +6,20 @@
     display: flex;
     width: 100%;
     padding: 20px;
+    gap: 2rem;
 
-    &__experince,
-    &__educaton {
+    &__experience,
+    &__education {
         width: 50%;
-        gap: 2rem;
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;  // Add position relative for absolute positioning of buttons
 
         &__headerText {
-            align-items: first baseline;
             display: inline-block;
-            color: var(--yellow-them-sub-text-color);
+            color: var(--yellow-them-main-color);
             font-size: 22px;
-            line-height: 1rem;
             font-weight: 700;
             letter-spacing: 0.5px;
             position: relative;
@@ -33,7 +32,7 @@
         &__headerText::after {
             position: absolute;
             width: 2px;
-            height: 2px;
+            height: 5px;
             background-color: var(--yellow-them-main-color);
             bottom: -1px;
             content: '';
@@ -48,43 +47,130 @@
         }
 
         &_vertical__timeline__element {
-            padding: 0px 0px 30px 0px;
+            padding: 0 0 30px 0;
+            position: relative; // Ensure position relative for absolute positioning of buttons
 
             &:last-child {
-                padding-bottom: 0px;
+                padding-bottom: 0;
             }
+
         }
 
         .vertical__timeline__element__title-wrapper {
             display: flex;
-            align-items: center;
+            margin-left: 10px;
+            align-items: flex-start;
+            gap: 1rem; // Added gap for spacing between title and description
 
             h2,
             h3 {
                 font-size: 16px;
+                font-weight: bold;
+                color: var(--yellow-them-sub-text-color);
+                margin-top: 1px;
+                justify-content: space-between;
+                
             }
 
             h3 {
-                margin: left;
+               
+                justify-content: space-between;
+                
+                
             }
 
-            p {
-                font-size: 18px;
+          .timeline__education p {
+                font-size: 20px;
+                margin-top: 10px;
+                line-height: 1.5;
+             
             }
         }
 
+        .vertical-timeline-element-content p {
+            margin: 1em 0 0;
+            line-height: 1.6;
+            display: flex;
+            font-size: 15px;
+            font-weight: 400;
+        }
+        .vertical__timeline__element__buttons__container {
+            display: flex;
+            // gap: 1px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        }
+        /* Absolute positioning for buttons in the bottom-right corner */
+        .open-btn,
+        .download-btn {
+            // position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: var(--yellow-theme-backgroud-collor);
+            color: var(--yellow-them-sub-text-color);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 50%; // Making buttons circular
+            transition: background-color 0.3s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;  // Size of the button
+            height: 40px;  // Size of the button
+            // margin-left: 1px;
+        }
+
+        .open-btn:hover
+        
+        {
+            background-color: var(--yellow-them-main-color); /* Replace with actual color code or fix var() function */
+            transform: scale(1.1); /* Slightly increase the size on hover */
+            opacity: 1
+        }
+        .download-btn:hover {
+            background-color: green; /* Replace with actual color code or fix var() function */
+            transform: scale(1.1); /* Slightly increase the size on hover */
+            opacity: 1
+        }
+        /* Optional: Make buttons smaller on mobile devices */
+        @media only screen and (max-width: 768px) {
+            .open-btn,
+            .download-btn {
+                font-size: 14px;
+                padding: 8px;
+                width: 35px; // Make it smaller for mobile devices
+                height: 35px;
+            }
+        }
+
+        .vertical-timeline-element-content .vertical-timeline-element-date {
+            float: left;
+            padding: 0.8em 0;
+            opacity: 0.7;
+            font-size: 15px;
+            color: var(--yellow-them-main-color);
+            font-weight: 500;
+        }
     }
 }
 
-@media only screen and (max-width :768px) {
+@media only screen and (max-width: 768px) {
     .timeline {
         flex-direction: column;
+        gap: 2rem;
 
-        &__experince,
-        &__educaton {
+        &__experience,
+        &__education {
             width: 100%;
-            gap: 2rem;
+        }
+
+        .vertical__timeline__element__title-wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1rem; // Added gap between title and description
         }
     }
-
 }
