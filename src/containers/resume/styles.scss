@@ -14,7 +14,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        position: relative;  // Add position relative for absolute positioning of buttons
+        position: relative; // Add position relative for absolute positioning of buttons
 
         &__headerText {
             display: inline-block;
@@ -69,23 +69,32 @@
                 color: var(--yellow-them-sub-text-color);
                 margin-top: 1px;
                 justify-content: space-between;
-                
-            }
 
+            }
             h3 {
-               
+
                 justify-content: space-between;
-                
-                
+
+
             }
 
-          .timeline__education p {
+            .timeline__education p {
                 font-size: 20px;
                 margin-top: 10px;
                 line-height: 1.5;
-             
+
             }
+ 
         }
+  .education_date {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 18px;
+  font-style: italic;
+  color: var(--yellow-them-main-color);
+  opacity: 0.8;
+}
 
         .vertical-timeline-element-content p {
             margin: 1em 0 0;
@@ -94,6 +103,7 @@
             font-size: 15px;
             font-weight: 400;
         }
+ 
         .vertical__timeline__element__buttons__container {
             display: flex;
             // gap: 1px;
@@ -101,6 +111,7 @@
             bottom: 10px;
             right: 10px;
         }
+
         /* Absolute positioning for buttons in the bottom-right corner */
         .open-btn,
         .download-btn {
@@ -118,25 +129,30 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 40px;  // Size of the button
-            height: 40px;  // Size of the button
+            width: 40px; // Size of the button
+            height: 40px; // Size of the button
             // margin-left: 1px;
         }
 
-        .open-btn:hover
-        
-        {
-            background-color: var(--yellow-them-main-color); /* Replace with actual color code or fix var() function */
-            transform: scale(1.1); /* Slightly increase the size on hover */
+        .open-btn:hover {
+            background-color: var(--yellow-them-main-color);
+            /* Replace with actual color code or fix var() function */
+            transform: scale(1.1);
+            /* Slightly increase the size on hover */
             opacity: 1
         }
+
         .download-btn:hover {
-            background-color: green; /* Replace with actual color code or fix var() function */
-            transform: scale(1.1); /* Slightly increase the size on hover */
+            background-color: green;
+            /* Replace with actual color code or fix var() function */
+            transform: scale(1.1);
+            /* Slightly increase the size on hover */
             opacity: 1
         }
+
         /* Optional: Make buttons smaller on mobile devices */
         @media only screen and (max-width: 768px) {
+
             .open-btn,
             .download-btn {
                 font-size: 14px;

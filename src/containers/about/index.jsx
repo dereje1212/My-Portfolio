@@ -31,7 +31,7 @@ const personalDtail = [
     },
 ]
 
-const jobsummary = "With six months of hands-on experience as a Front End Developer, I have honed my ability to seamlessly blend design and programming to create engaging user experiences. Passionate about aesthetics and UI design, I focus on efficient website development, proactive feature optimization, and effective debugging. I am committed to providing a thorough and professional approach to my work, utilizing UX and UI concepts to follow design guidelines and ensure attention to detail. My goal is to help implement design ideas and deliver immersive user experiences for future employers.";
+const jobsummary = "With one year of hands-on experience as a Front End Developer, I have honed my ability to seamlessly blend design and programming to create engaging user experiences. Passionate about aesthetics and UI design, I focus on efficient website development, proactive feature optimization, and effective debugging. I am committed to providing a thorough and professional approach to my work, utilizing UX and UI concepts to follow design guidelines and ensure attention to detail. My goal is to help implement design ideas and deliver immersive user experiences for future employers.";
 
 const About = () => {
     return (

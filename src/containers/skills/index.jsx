@@ -26,10 +26,10 @@ const skillsData = [
                 skillName: "REACT JS",
                 Percentage: "75",
             },
-            {
-                skillName: "ANGULAR",
-                Percentage: "60",
-            },
+            // {
+            //     skillName: "ANGULAR",
+            //     Percentage: "60",
+            // },
         ],
     },
     {
@@ -51,10 +51,10 @@ const skillsData = [
                 skillName: "DIJANGO",
                 Percentage: "80"
             },
-            {
-                skillName: "KOTLIN",
-                Percentage: "50"
-            },
+            // {
+            //     skillName: "KOTLIN",
+            //     Percentage: "50"
+            // },
         ]
     },
     {
@@ -72,10 +72,10 @@ const skillsData = [
                 skillName: "ORACLE",
                 Percentage: "50"
             },
-            {
-                skillName: "REDIS",
-                Percentage: "50"
-            },
+            // {
+            //     skillName: "REDIS",
+            //     Percentage: "50"
+            // },
         ]
     }
 
